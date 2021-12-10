@@ -1,7 +1,7 @@
-const { Client, Intents} = require('discord.js');
-const myIntents = new Intents();
-myIntents.add(Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILD_MEMBERS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILDS);
-const client = new Client({intents: myIntents});
+const discord = require('discord.js');
+const myIntents = new discord.Intents();
+myIntents.add(discord.Intents.FLAGS.GUILD_PRESENCES, discord.Intents.FLAGS.GUILD_MEMBERS, discord.Intents.FLAGS.GUILD_MESSAGES, discord.Intents.FLAGS.GUILDS);
+const client = new discord.Client({intents: myIntents});
 config = require("./config.json");
 
 client.login(process.env.TOKEN).then();
