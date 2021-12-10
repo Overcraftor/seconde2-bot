@@ -28,6 +28,7 @@ client.on("messageCreate", (message) => {
     });
 
     if(!hasRole){
+        message.delete().then();
         let roleToAssign =  message.guild.roles.cache.find(r => r.id === config.roleOnNameSet);
         message.member.setNickname(message.content, "Nom de la personne").then((member) => {
             member.roles.add(roleToAssign).then().catch();
